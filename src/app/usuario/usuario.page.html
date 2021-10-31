@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-card >
+      <ion-card-header>
+      <ion-card-title>Nombre</ion-card-title>
+      <ion-card-title>Apellido</ion-card-title>
+      <ion-card-title>Peso</ion-card-title>
+      </ion-card-header>
+
+    </ion-card >
+    <ion-card  wrap *ngFor="let item of listado; let index = index">
+      <ion-card-content>
+      <ion-card-subtitle>Nombre :{{item.id_usuarios}}</ion-card-subtitle>
+      <ion-card-subtitle>Apodo: {{item.id_peleador}}</ion-card-subtitle>
+      <ion-card-subtitle>Peso: {{item.status}}</ion-card-subtitle>
+    </ion-card-content>
+  
+    </ion-card >
+  </ion-grid>
+
+</ion-content>

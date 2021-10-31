@@ -1,0 +1,7 @@
+{
+  "name": "parcial-ii-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

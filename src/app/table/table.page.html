@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>table</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-card >
+      <ion-card-header>
+      <ion-card-title>Nombre</ion-card-title>
+      <ion-card-title>Apellido</ion-card-title>
+      <ion-card-title>Apodo</ion-card-title>
+      <ion-card-title>Peso</ion-card-title>
+      </ion-card-header>
+
+    </ion-card >
+    <ion-card  wrap *ngFor="let item of listado; let index = index">
+      <ion-card-content>
+      <ion-card-subtitle>Nombre :{{item.nombre}}</ion-card-subtitle>
+      <ion-card-subtitle>Apellido: {{item.apellido}}</ion-card-subtitle>
+      <ion-card-subtitle>Apodo: {{item.apellido}}</ion-card-subtitle>
+      <ion-card-subtitle>Peso: {{item.peso}}</ion-card-subtitle>
+      <ion-radio-group [(ngModel)]="id">
+        <ion-item>
+          <ion-label>Falso</ion-label>
+          <ion-radio color="danger" (click)="guardarid(item.id_usuarios,item.id,false)"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Afirmativo</ion-label>
+          <ion-radio color="success" (click)="guardarid(item.id_usuarios,item.id,true)"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-card-content>
+  
+    </ion-card >
+  </ion-grid>
+  <ion-input type="text" [(ngModel)]="datos.id" placeholder="id"></ion-input>
+
+  <ion-button routerLink="/usuario" round (click)="consultapeleadores()" color="success">Next</ion-button>
+
+</ion-content>

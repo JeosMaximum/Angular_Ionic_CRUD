@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>createusuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-title>Create Usuarios Boxeo</ion-card-title>
+    <ion-card-content>
+      <ion-input type="text" [(ngModel)]="datos.nombre" placeholder="Nombre"></ion-input>
+      <ion-input type="text" [(ngModel)]="datos.apellido" placeholder="Apellido"></ion-input>
+      <ion-input type="text" [(ngModel)]="datos.apodo" placeholder="Apodo"></ion-input>
+      <ion-input type="number" [(ngModel)]="datos.peso" placeholder="Peso"></ion-input>
+      <ion-input type="text" [(ngModel)]="datos.experiencia" placeholder="Experiencia"></ion-input>
+      <ion-input type="number" [(ngModel)]="datos.edad" placeholder="Edad"></ion-input>
+      <ion-input type="text" [(ngModel)]="datos.correo" placeholder="Correo"></ion-input>
+      <ion-input type="text" [(ngModel)]="datos.contrasena" placeholder="Contrasena"></ion-input>
+      <ion-button routerLink="/home" round (click)="save()" color="success">Guardar</ion-button>
+    
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
